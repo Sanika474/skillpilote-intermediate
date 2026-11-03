@@ -1,0 +1,49 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadProjectBucket",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::skillpilote-cloudapp-872376836627-ap-south-1"
+    },
+    {
+      "Sid": "ReadProjectObjects",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::skillpilote-cloudapp-872376836627-ap-south-1/*"
+    },
+    {
+      "Sid": "InspectProjectLambda",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:GetFunction",
+        "lambda:GetFunctionConfiguration"
+      ],
+      "Resource": "arn:aws:lambda:ap-south-1:872376836627:function:SkillPilote-CloudApp-Function"
+    },
+    {
+      "Sid": "ReadProjectDynamoDB",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:DescribeTable",
+        "dynamodb:GetItem",
+        "dynamodb:Query"
+      ],
+      "Resource": [
+        "arn:aws:dynamodb:ap-south-1:872376836627:table/SkillPilote-CloudApp-Records",
+        "arn:aws:dynamodb:ap-south-1:872376836627:table/SkillPilote-CloudApp-Records/index/*"
+      ]
+    },
+    {
+      "Sid": "ReadProjectLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:DescribeLogStreams",
+        "logs:GetLogEvents",
+        "logs:FilterLogEvents"
+      ],
+      "Resource": "arn:aws:logs:ap-south-1:872376836627:log-group:/aws/lambda/SkillPilote-CloudApp-Function:*"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ListProjectBucket",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::skillpilote-cloudapp-872376836627-ap-south-1"
+    },
+    {
+      "Sid": "UploadProjectFiles",
+      "Effect": "Allow",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::skillpilote-cloudapp-872376836627-ap-south-1/*"
+    },
+    {
+      "Sid": "DeployProjectLambda",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:GetFunction",
+        "lambda:GetFunctionConfiguration",
+        "lambda:UpdateFunctionCode"
+      ],
+      "Resource": "arn:aws:lambda:ap-south-1:872376836627:function:SkillPilote-CloudApp-Function"
+    },
+    {
+      "Sid": "ReadProjectLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:DescribeLogStreams",
+        "logs:GetLogEvents",
+        "logs:FilterLogEvents"
+      ],
+      "Resource": "arn:aws:logs:ap-south-1:872376836627:log-group:/aws/lambda/SkillPilote-CloudApp-Function:*"
+    }
+  ]
+}

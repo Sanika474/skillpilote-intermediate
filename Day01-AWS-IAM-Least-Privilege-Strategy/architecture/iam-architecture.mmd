@@ -1,0 +1,18 @@
+﻿flowchart TD
+    A["SkillPilote CloudApp"] --> B["IAM Groups"]
+
+    B --> C["Developers"]
+    B --> D["Deployers"]
+    B --> E["Auditors"]
+
+    C --> F["Developer Policy"]
+    D --> G["Deployer Policy"]
+    E --> H["Auditor Policy"]
+
+    F --> I["S3 / Lambda / DynamoDB / CloudWatch"]
+    G --> J["S3 / Lambda / CloudWatch"]
+    H --> K["Read-only S3 / Lambda / DynamoDB / CloudWatch"]
+
+    L["sp_developer"] --> C
+    M["sp_deployer"] --> D
+    N["sp_auditor"] --> E
