@@ -1,0 +1,20 @@
+flowchart TB
+    Internet((Internet))
+    IGW[Internet Gateway]
+
+    subgraph VPC["VPC - 10.0.0.0/16"]
+        subgraph Public["Public Subnet - 10.0.1.0/24"]
+            Web[Web Tier]
+            NAT[NAT Gateway]
+        end
+
+        subgraph Private["Private Subnet - 10.0.2.0/24"]
+            DB[Database Tier]
+        end
+    end
+
+    Internet <--> IGW
+    IGW --> Web
+    Web --> DB
+    Private --> NAT
+    NAT --> IGW
