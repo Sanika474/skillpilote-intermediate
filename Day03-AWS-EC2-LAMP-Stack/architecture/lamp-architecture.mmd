@@ -1,0 +1,9 @@
+flowchart TD
+    A[User Browser] --> B[Internet Gateway]
+    B --> C[AWS VPC]
+    C --> D[Public Subnet]
+    D --> E[EC2 Instance]
+    E --> F[Amazon Linux 2023]
+    F --> G[Apache Web Server]
+    G --> H[PHP Application]
+    H --> I[MariaDB Database]
