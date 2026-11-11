@@ -1,0 +1,18 @@
+flowchart TD
+    Internet((Internet))
+    IGW[Internet Gateway]
+    VPC[VPC 172.31.0.0/16]
+    RT[Main Route Table]
+    NACL[Custom Network ACL]
+    SUBNET[Public Subnet 172.31.0.0/20]
+    EC2[EC2 Instances]
+
+    Internet <--> IGW
+    IGW <--> RT
+    RT <--> VPC
+    VPC --> NACL
+    NACL --> SUBNET
+    SUBNET --> EC2
+
+    NACL --- IN[Inbound: HTTP 80 / HTTPS 443]
+    NACL --- OUT[Outbound: Allow All]
