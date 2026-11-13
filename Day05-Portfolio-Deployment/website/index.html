@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of a technology enthusiast and aspiring developer.">
+    <title>Sanika | Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">Sanika<span>.</span></a>
+
+            <button class="menu-btn" id="menuBtn"
+                aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="tagline">WELCOME TO MY PORTFOLIO</p>
+
+                <h1>Hello, I'm <span>Sanika Jirapure</span></h1>
+
+                <h2>Aspiring IT Professional</h2>
+
+                <p>
+                    I am passionate about technology, cloud computing
+                    and web development. I enjoy learning new skills
+                    and building practical projects.
+                </p>
+
+                <a href="#projects" class="btn">Explore My Work</a>
+            </div>
+
+            <div class="hero-image">
+                <div class="profile-circle">S</div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <h2>About Me</h2>
+
+            <p>
+                I am an enthusiastic technology learner interested in
+                cloud computing, AWS services and web development.
+                I enjoy solving problems, exploring new technologies
+                and creating useful digital solutions.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <h2>Technical Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card">HTML5</div>
+                <div class="skill-card">CSS3</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">AWS EC2</div>
+                <div class="skill-card">Amazon S3</div>
+                <div class="skill-card">AWS IAM</div>
+                <div class="skill-card">CloudFront</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h2>My Projects</h2>
+
+            <div class="project-grid">
+
+                <article class="project-card">
+                    <h3>AWS IAM Security</h3>
+                    <p>
+                        Implemented IAM users, groups and
+                        least-privilege access policies.
+                    </p>
+                    <span>AWS IAM</span>
+                </article>
+
+                <article class="project-card">
+                    <h3>AWS VPC Architecture</h3>
+                    <p>
+                        Explored multi-tier networking with
+                        public and private subnets.
+                    </p>
+                    <span>AWS VPC</span>
+                </article>
+
+                <article class="project-card">
+                    <h3>LAMP Stack Deployment</h3>
+                    <p>
+                        Configured a Linux, Apache, MySQL and
+                        PHP application environment on EC2.
+                    </p>
+                    <span>AWS EC2</span>
+                </article>
+
+                <article class="project-card">
+                    <h3>Network ACL Security</h3>
+                    <p>
+                        Explored network traffic filtering
+                        using AWS Network ACLs.
+                    </p>
+                    <span>AWS Networking</span>
+                </article>
+
+                <article class="project-card">
+                    <h3>Personal Portfolio</h3>
+                    <p>
+                        Designed a responsive portfolio website
+                        using HTML, CSS and JavaScript.
+                    </p>
+                    <span>Web Development</span>
+                </article>
+
+                <article class="project-card">
+                    <h3>Cloud Deployment</h3>
+                    <p>
+                        Planned a static website deployment
+                        using Amazon S3 and CloudFront.
+                    </p>
+                    <span>AWS Cloud</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <h2>Contact Me</h2>
+
+            <p>
+                Let's connect and explore opportunities
+                to learn and grow together.
+            </p>
+
+            <a href="mailto:sanikajirapure.com" class="btn">
+                Send Me an Email
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © <span id="year"></span> Sanika.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

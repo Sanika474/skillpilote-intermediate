@@ -1,0 +1,384 @@
+
+/* ==========================
+   GLOBAL STYLES
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0b1120;
+    color: #f1f5f9;
+    line-height: 1.7;
+}
+
+:root {
+    --primary: #38bdf8;
+    --secondary: #818cf8;
+    --card: #172338;
+    --text: #cbd5e1;
+}
+
+/* ==========================
+   NAVIGATION BAR
+========================== */
+
+header {
+    background: rgba(15, 23, 42, 0.96);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #243249;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e2e8f0;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero {
+    max-width: 1150px;
+    min-height: 570px;
+    margin: auto;
+    padding: 90px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero h2 {
+    color: #cbd5e1;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.hero-content > p:not(.tagline) {
+    color: var(--text);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        #0284c7,
+        #4f46e5
+    );
+    color: white;
+    text-decoration: none;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+}
+
+.profile-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        #0284c7,
+        #6366f1
+    );
+    border: 7px solid #263b59;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    font-weight: 800;
+    color: white;
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.18);
+}
+
+/* ==========================
+   COMMON SECTION STYLES
+========================== */
+
+.section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 75px 25px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 34px;
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+.section > p {
+    max-width: 780px;
+    margin: auto;
+    color: var(--text);
+    font-size: 16px;
+}
+
+/* ==========================
+   SKILLS SECTION
+========================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--card);
+    border: 1px solid #293a53;
+    padding: 25px 15px;
+    border-radius: 12px;
+    color: var(--primary);
+    font-size: 17px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--primary);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.12);
+}
+
+/* ==========================
+   PROJECTS SECTION
+========================== */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--card);
+    border: 1px solid #293a53;
+    padding: 28px;
+    border-radius: 14px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--primary);
+}
+
+.project-card h3 {
+    color: var(--primary);
+    margin-bottom: 13px;
+    font-size: 19px;
+}
+
+.project-card p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.project-card span {
+    display: inline-block;
+    background: #253b58;
+    color: #93c5fd;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* ==========================
+   CONTACT SECTION
+========================== */
+
+.contact {
+    padding-bottom: 90px;
+}
+
+.contact p {
+    margin-bottom: 25px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    background: #111c30;
+    border-top: 1px solid #293a53;
+    padding: 25px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media (max-width: 900px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #111c30;
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+        border-bottom: 1px solid #293a53;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 60px;
+        gap: 35px;
+    }
+
+    .profile-circle {
+        width: 180px;
+        height: 180px;
+        font-size: 65px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 55px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 15px 18px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+}
